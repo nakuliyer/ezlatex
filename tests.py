@@ -1,4 +1,4 @@
-from ezlatex import exp, text
+from ezlatex import exp, text, doc, line
 
 exp.mode = 2  # See the LaTeX instead of a nicer string
 
@@ -28,9 +28,12 @@ print(T == (hbar*c**3)/(8*pi*G*M*exp("k_b")))
 from ezlatex.consts import i, hbar, psi, t, m, x, y, z, V
 schrodinger = i*hbar*exp.deriv(psi, t) == -hbar**2/(2*m)*exp(exp.partial(psi, x, 2)+exp.partial(psi, y, 2)+exp.partial(psi, z, 2))+V*psi
 print(schrodinger)
-schrodinger.create()
 
 from ezlatex.consts import delta
 print(delta * x)
 print(exp.sqrt(delta))
 
+pythag = a**2+b**2==c**2
+fermat = a**m+b**n==c**k
+docx = doc(line(text("In the year $-1$ million, pythagoras proved that "), pythag, text("was true")), line(text("But, "), fermat, text("Might not be")), name="logic")
+# docx.create()

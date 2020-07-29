@@ -1,4 +1,4 @@
-from pylatex import Document, Alignat
+from pylatex import Document, Alignat, NoEscape
 from random import random
 import re
 
@@ -45,6 +45,9 @@ class latex:
         pass
 
     def create(self):
+        pass
+
+    def force_latex(self):
         pass
 
 
@@ -169,6 +172,13 @@ class exp(latex):
                     return "{%s{%s}}" % (self.method, self.value)
                 raise ValueError("Invalid Function \"{}\"".format(self.method))
         raise ValueError("Mode Unavailable")
+
+    def force_latex(self):
+        original_mode = exp.mode
+        exp.mode = 2
+        to_return = self.__repr__()
+        exp.mode = original_mode
+        return to_return
 
     def create(self):
         original_mode = exp.mode
@@ -335,7 +345,13 @@ class exp(latex):
 
 class text(latex):
     def __init__(self, text):
-        self.text = "\\text{}".format(text)
+        if isinstance(text, str):
+            self.text = "\\textrm{ %s }" % text
+        else:
+            TypeError("\"text\" parameter \"{}\" must be str".format(text))
+
+    def force_latex(self):
+        return self.text
 
     def create(self):
         doc = Document(_rand_filename())
@@ -350,5 +366,23 @@ class line:
 
     def add(self, *exps):
         self.exps += exps
+
+    def __repr__(self):
+        return " ".join([i.force_latex() for i in self.exps])
+
+
+class doc:
+    def __init__(self, *lines, name=None):
+        self.lines = lines
+        self.name = name
+        if self.name is None:
+            self.name = _rand_filename()
+
+    def create(self):
+        lines = "\n".join(["$$%s$$" % l for l in self.lines])
+        docx = Document(data=NoEscape(lines))
+        docx.generate_pdf(self.name)
+
+
 
 
