@@ -1,4 +1,11 @@
 from pylatex import Document, Alignat
+from random import random
+import re
+
+
+def _rand_filename(digits=6):
+    return str(int(random() * (10**digits)))
+
 
 def _to_exp(items):
     if isinstance(items, exp):
@@ -16,7 +23,32 @@ def _to_exp(items):
     raise TypeError("Cannot Convert to Expression")
 
 
-class exp:
+def _clean_exp(items):
+    if isinstance(items, exp):
+        if isinstance(items.value, (float, int)):
+            return items
+        if isinstance(items.value, str):
+            return exp(items.value.replace('\\', '').replace("{", "(").replace("}", ")"))
+    if isinstance(items, (list, tuple)):
+        res = []
+        for item in items:
+            if isinstance(item.value, str):
+                res.append(exp(item.value.replace('\\', '').replace("{", "(").replace("}", ")")))
+            else:
+                res.append(item)
+        return tuple(res)
+    raise TypeError("Cannot Convert to Expression")
+
+
+class latex:
+    def __init__(self):
+        pass
+
+    def create(self):
+        pass
+
+
+class exp(latex):
     """ Expressions """
 
     """ Class Variables """
@@ -71,6 +103,7 @@ class exp:
             return "%s(%s)" % (self.method, str(self.value))
         elif exp.mode == 1:
             # special methods
+            self.value = _clean_exp(self.value)
             if self.method is "pro":
                 return "(%s)" % self.value
             elif self.method is "add":
@@ -140,7 +173,7 @@ class exp:
     def create(self):
         original_mode = exp.mode
         exp.mode = 2
-        doc = Document('basic')
+        doc = Document(_rand_filename())
         with doc.create(Alignat(numbering=False, escape=False)) as agn:
             agn.append(self.__repr__())
         doc.generate_pdf()
@@ -299,6 +332,23 @@ class exp:
 
     # comparison statics
 
+
+class text(latex):
+    def __init__(self, text):
+        self.text = "\\text{}".format(text)
+
+    def create(self):
+        doc = Document(_rand_filename())
+        with doc.create(Alignat(numbering=False, escape=False)) as agn:
+            agn.append(self.text)
+        doc.generate_pdf()
+
+
 class line:
     def __init__(self, *exps):
-        pass
+        self.exps = exps
+
+    def add(self, *exps):
+        self.exps += exps
+
+

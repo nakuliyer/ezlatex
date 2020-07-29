@@ -1,4 +1,4 @@
-from ezlatex import exp
+from ezlatex import exp, text
 
 exp.mode = 2  # See the LaTeX instead of a nicer string
 
@@ -18,7 +18,7 @@ print(a**m+b**n==c**k)
 from ezlatex.consts import e, i, pi
 print(e**(i*pi) == -1)
 
-from ezlatex.consts import x, y, z
+from ezlatex.consts import x
 print(exp.deriv(x**2, x) == 2*x)
 print(exp.deriv(x**2, x, n=2) == 2)
 
@@ -26,4 +26,11 @@ from ezlatex.consts import hbar, c, pi, G, M, T
 print(T == (hbar*c**3)/(8*pi*G*M*exp("k_b")))
 
 from ezlatex.consts import i, hbar, psi, t, m, x, y, z, V
-print(i*hbar*exp.deriv(psi, t) == -hbar**2/(2*m)*exp(exp.partial(psi, x, 2)+exp.partial(psi, y, 2)+exp.partial(psi, z, 2))+V*psi)
+schrodinger = i*hbar*exp.deriv(psi, t) == -hbar**2/(2*m)*exp(exp.partial(psi, x, 2)+exp.partial(psi, y, 2)+exp.partial(psi, z, 2))+V*psi
+print(schrodinger)
+schrodinger.create()
+
+from ezlatex.consts import delta
+print(delta * x)
+print(exp.sqrt(delta))
+
