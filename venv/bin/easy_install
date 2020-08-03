@@ -1,4 +1,4 @@
-#!/Users/nakul/Documents/PycharmProjects.nosync/ezlatex/venv/bin/python
+#!/Users/nakul/Documents/PycharmProjects/ezlatex/venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys

@@ -29,7 +29,7 @@ end
 # unset irrelevant variables
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/Users/nakul/Documents/PycharmProjects.nosync/ezlatex/venv"
+set -gx VIRTUAL_ENV "/Users/nakul/Documents/PycharmProjects/ezlatex/venv"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH
