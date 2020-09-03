@@ -1,2 +1,2 @@
 from .core import *
-from .consts import *
+from .document import *

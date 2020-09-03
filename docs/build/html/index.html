@@ -1,0 +1,433 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Welcome to EzLaTeX’s documentation! &mdash; EzLaTeX 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="EzLaTeX 0.0.1 documentation" href="#"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="#" class="icon icon-home"> EzLaTeX
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Welcome to EzLaTeX’s documentation!</a></li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">EzLaTeX</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#">Docs</a> &raquo;</li>
+        
+      <li>Welcome to EzLaTeX’s documentation!</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="welcome-to-ezlatex-s-documentation">
+<h1>Welcome to EzLaTeX’s documentation!<a class="headerlink" href="#welcome-to-ezlatex-s-documentation" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<span class="target" id="module-ezlatex.latexable"></span><span class="target" id="module-ezlatex.core"></span><dl class="py class">
+<dt id="ezlatex.core.exp">
+<em class="property">class </em><code class="sig-prename descclassname">ezlatex.core.</code><code class="sig-name descname">exp</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">method</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">displayf</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">latexf</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">evalf</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ezlatex.core.exp" title="Permalink to this definition">¶</a></dt>
+<dd><p>LaTeX-able and Callable Expressions.</p>
+<dl class="py method">
+<dt id="ezlatex.core.exp.__add__">
+<code class="sig-name descname">__add__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">other</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ezlatex.core.exp.__add__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return new expression defined as <code class="docutils literal notranslate"><span class="pre">self</span> <span class="pre">+</span> <span class="pre">other</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="ezlatex.core.exp.__call__">
+<code class="sig-name descname">__call__</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ezlatex.core.exp.__call__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluates all the functions recursively, using kwargs as variables if provided. If not all variables are pro-
+vided, it will evaluate as much as possible into the returned expression.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">expr</span> <span class="o">=</span> <span class="n">exp</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="n">exp</span><span class="p">(</span><span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="o">*</span> <span class="mi">3</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">expr</span><span class="p">(</span><span class="n">r</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="go">sin(x) + 6.0                # this is an exp</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">exp</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">r</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="go">7.0                         # this is a float</span>
+</pre></div>
+</div>
+<p>If <code class="docutils literal notranslate"><span class="pre">override_value</span></code> <cite>kwarg</cite> is provided in the constructor, that number will override the default value (i.e. a
+display as <cite>\infty</cite>, but a value of <cite>99</cite>).</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">override_name</span></code> <cite>kwarg</cite> is provided in the constructor, that name will be used to match the variable in this
+method’s <cite>**kwargs</cite>.</p>
+<p>If <cite>evalf</cite> is not provided in the constructor, this will throw a <cite>NotImplementedError</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>*args</strong> – none expected</p></li>
+<li><p><strong>**kwargs</strong> – variables to be computed with</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>float if all variables given, else exp</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><cite>float</cite> or <cite>exp</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="ezlatex.core.exp.__eq__">
+<code class="sig-name descname">__eq__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">other</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ezlatex.core.exp.__eq__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return new expression defined as <code class="docutils literal notranslate"><span class="pre">self</span> <span class="pre">=</span> <span class="pre">other</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="ezlatex.core.exp.__ge__">
+<code class="sig-name descname">__ge__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">other</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ezlatex.core.exp.__ge__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return new expression defined as <code class="docutils literal notranslate"><span class="pre">self</span> <span class="pre">\geq</span> <span class="pre">other</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="ezlatex.core.exp.__gt__">
+<code class="sig-name descname">__gt__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">other</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ezlatex.core.exp.__gt__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return new expression defined as <code class="docutils literal notranslate"><span class="pre">self</span> <span class="pre">&gt;</span> <span class="pre">other</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="ezlatex.core.exp.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">method</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">displayf</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">latexf</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">evalf</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ezlatex.core.exp.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes an expression.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> – <p>any of the arguments normally passed to this method</p>
+<ul>
+<li><p>if type is <code class="docutils literal notranslate"><span class="pre">ezlatex.exp</span></code> then this object acts as parenthesis</p></li>
+<li><p>if type is <code class="docutils literal notranslate"><span class="pre">str</span></code> then this object is a variable</p></li>
+<li><p>if type is a number then this object is a number</p></li>
+<li><p>if type is a tuple then a method should be passed to evaluate/display</p></li>
+<li><p>if value is <code class="docutils literal notranslate"><span class="pre">None</span></code> then this object is a new variable <code class="docutils literal notranslate"><span class="pre">x_n</span></code>, where <code class="docutils literal notranslate"><span class="pre">n</span></code> keeps increasing as we make more</p></li>
+</ul>
+</p></li>
+<li><p><strong>method</strong> (<em>str</em>) – method name (i.e. <code class="docutils literal notranslate"><span class="pre">&quot;sum&quot;</span></code>)</p></li>
+<li><p><strong>displayf</strong> (<em>func</em>) – simple display function</p></li>
+<li><p><strong>latexf</strong> (<em>func</em>) – latex display function</p></li>
+<li><p><strong>evalf</strong> (<em>func</em>) – evaluation function</p></li>
+</ul>
+</dd>
+<dt class="field-even">Keyword Arguments</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>override_name</strong> (<em>str</em>) – override name to be referred to in <code class="docutils literal notranslate"><span class="pre">__call__</span></code>’s kwargs; also overrides default name creating (i.e. delta -&gt; delta)</p></li>
+<li><p><strong>override_value</strong> – override constant value to be used in <code class="docutils literal notranslate"><span class="pre">__call__</span></code> (useful for values like infinity, which can be computed as a large real number)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="ezlatex.core.exp.__le__">
+<code class="sig-name descname">__le__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">other</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ezlatex.core.exp.__le__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return new expression defined as <code class="docutils literal notranslate"><span class="pre">self</span> <span class="pre">\leq</span> <span class="pre">other</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="ezlatex.core.exp.__lt__">
+<code class="sig-name descname">__lt__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">other</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ezlatex.core.exp.__lt__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return new expression defined as <code class="docutils literal notranslate"><span class="pre">self</span> <span class="pre">&lt;</span> <span class="pre">other</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="ezlatex.core.exp.__mul__">
+<code class="sig-name descname">__mul__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">other</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ezlatex.core.exp.__mul__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return new expression defined as <code class="docutils literal notranslate"><span class="pre">self</span> <span class="pre">*</span> <span class="pre">other</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="ezlatex.core.exp.__ne__">
+<code class="sig-name descname">__ne__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">other</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ezlatex.core.exp.__ne__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return new expression defined as <code class="docutils literal notranslate"><span class="pre">self</span> <span class="pre">\neq</span> <span class="pre">other</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="ezlatex.core.exp.__neg__">
+<code class="sig-name descname">__neg__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ezlatex.core.exp.__neg__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return new expression defined as <code class="docutils literal notranslate"><span class="pre">-self</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="ezlatex.core.exp.__pow__">
+<code class="sig-name descname">__pow__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">power</span></em>, <em class="sig-param"><span class="n">modulo</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ezlatex.core.exp.__pow__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return new expression defined as <code class="docutils literal notranslate"><span class="pre">self</span> <span class="pre">^</span> <span class="pre">other</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="ezlatex.core.exp.__repr__">
+<code class="sig-name descname">__repr__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ezlatex.core.exp.__repr__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Represent an expression. If <code class="docutils literal notranslate"><span class="pre">exp._mode</span></code> is:
+* <cite>0</cite>, then this will be a basic representation: a stringified number, variable name, or string of the
+format <cite>[method](first_input, second_input, ….)</cite>.
+* <cite>1</cite>, then this will be a display representation: it will return <code class="docutils literal notranslate"><span class="pre">displayf</span></code> if it exists, otherwise the
+same as the basic representation
+* <cite>2</cite>, then this will be a LaTeX representation: it will return <code class="docutils literal notranslate"><span class="pre">latexf</span></code> if it exists, otherwise the same
+as the display representation</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="ezlatex.core.exp.__sub__">
+<code class="sig-name descname">__sub__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">other</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ezlatex.core.exp.__sub__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return new expression defined as <code class="docutils literal notranslate"><span class="pre">self</span> <span class="pre">-</span> <span class="pre">other</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="ezlatex.core.exp.__truediv__">
+<code class="sig-name descname">__truediv__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">other</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ezlatex.core.exp.__truediv__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return new expression defined as <code class="docutils literal notranslate"><span class="pre">self</span> <span class="pre">/</span> <span class="pre">other</span></code>. Displays a fraction in LaTeX.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="ezlatex.core.exp.to_latex">
+<code class="sig-name descname">to_latex</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">display_style</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ezlatex.core.exp.to_latex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert to LaTeX.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="ezlatex.core.expression">
+<code class="sig-prename descclassname">ezlatex.core.</code><code class="sig-name descname">expression</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">f</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ezlatex.core.expression" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wrapper for functions to use that converts all inputs into expressions, with special features:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nd">@expression</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
+<span class="gp">&gt;&gt;&gt; </span>   <span class="k">return</span> <span class="n">a</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">45</span> <span class="o">*</span> <span class="n">b</span> <span class="o">/</span> <span class="n">c</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span><span class="p">()</span>  <span class="c1"># this is an expression</span>
+<span class="go">a^2 + 45b / c</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>  <span class="c1"># this is a float</span>
+<span class="go">-29.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>  <span class="c1"># this is an expression</span>
+<span class="go">1 + 90 / c</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt id="ezlatex.core.simple">
+<code class="sig-prename descclassname">ezlatex.core.</code><code class="sig-name descname">simple</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">f</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ezlatex.core.simple" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wrapper for simple functions that require all inputs to be computed before the function can proceed.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="ezlatex.core.to_exp">
+<code class="sig-prename descclassname">ezlatex.core.</code><code class="sig-name descname">to_exp</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">items</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ezlatex.core.to_exp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converts items to exp. If items is a list, then each item will be converted; if otherwise, items itself will be.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>items</strong> – A <cite>str</cite>, <cite>int</cite>, <cite>float</cite>, <cite>list</cite>, <cite>tuple</cite> or <cite>exp</cite> to be converted to an <cite>exp</cite></p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>converted items</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#ezlatex.core.exp" title="ezlatex.core.exp">exp</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<span class="target" id="module-ezlatex.document"></span></div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Nakul Iyer.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.0.1',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/language_data.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

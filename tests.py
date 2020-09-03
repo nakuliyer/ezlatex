@@ -1,4 +1,5 @@
-from ezlatex import exp, text, doc, line, infty
+from ezlatex import exp, expression, text, doc, line
+from ezlatex.consts import hbar, psi, m, t, i, x, y, z, V, a, b, c, k
 import math
 # q = exp.big_pi("i", 1, exp("n"), exp("v")*exp("i"))
 # print(q)
@@ -6,11 +7,29 @@ import math
 # print(q(v=1, n=5))
 # # q.create()
 
-exp.mode = 2
+@expression
+def f(a, b, c):
+    return a**2 + 45 * b / c
+
+# f = schrodinger = i*hbar*exp.partial(psi, t) == -hbar**2/(2*m)*exp(exp.partial(psi, x, 2)+exp.partial(psi, y, 2)+exp.partial(psi, z, 2))+V*psi
+
+# print(f.to_latex())
+print(f(1, -4, 6))
+
+f = exp.indef_integral(x, x**2)
+print(f.to_latex())
+
+exp._mode = 2
 x = exp("x")
 n = exp("n")
-q = exp.sin(x) == exp.sigma(n, 0, infty, exp(-1)**n / exp.factorial(2*n+1) * x**(2*n+1))
+# q = exp.sin(x) == exp.sigma(n, 0, infty, exp(-1)**n / exp.factorial(2*n+1) * x**(2*n+1))
+# q = exp.deriv(x**2, x)
+# exp.mode = 2
+# q = exp.deriv((x ** 5)**2, x)
+# q = exp.nroot(x, 3)
+q = exp.integral(x, 1, 2, exp.sin(x))
 print(q)
+# print(q())
 
 # x = exp("x")
 # q = exp(exp.sin(x) + exp("r") * x + x**2 + exp("f") * exp() ** x)
@@ -71,7 +90,7 @@ print(q)
 # pythag = a**2+b**2==c**2
 # fermat = a**m+b**n==c**k
 # docx = doc(line(text("In the year $-1$ million, pythagoras proved that "), pythag, text("was true")), line(text("But, "), fermat, text("Might not be")), name="logic")
-# # docx.create()
+# docx.create()
 #
 # q = a + b
 # exp.mode = 0
