@@ -44,32 +44,66 @@ def simple(f):
     return get_values
 
 
-def expression(f):
-    """ Wrapper for functions to use that converts all inputs into expressions, with special features:
+# def expression(f):
+#     """ Wrapper for functions to use that converts all inputs into expressions, with special features:
+#
+#         .. code-block:: python
+#
+#             >>> @expression
+#             >>> def f(a, b, c):
+#             >>>    return a**2 + 45 * b / c
+#             >>> f()  # this is an expression
+#             a^2 + 45b / c
+#             >>> f(1, -5, 6)  # this is a float
+#             -29.0
+#             >>> f(a=1, b=2)  # this is an expression
+#             1 + 90 / c
+#         """
+#     def expressionify(*args, **kwargs):
+#         arg_names = inspect.getfullargspec(f).args
+#         if len(kwargs) > 0:
+#             return f(*[exp(arg) for arg in arg_names])(**kwargs)
+#         if len(args) < len(arg_names):
+#             return f(*[exp(arg) for arg in arg_names])
+#         new_kwargs = {}
+#         for arg_idx in range(len(arg_names)):
+#             new_kwargs[arg_names[arg_idx]] = args[arg_idx]
+#         return f(*[exp(arg) for arg in arg_names])(**new_kwargs)
+#     return expressionify
 
-        .. code-block:: python
 
-            >>> @expression
-            >>> def f(a, b, c):
-            >>>    return a**2 + 45 * b / c
-            >>> f()  # this is an expression
-            a^2 + 45b / c
-            >>> f(1, -5, 6)  # this is a float
-            -29.0
-            >>> f(a=1, b=2)  # this is an expression
-            1 + 90 / c
-        """
-    def expressionify(*args, **kwargs):
-        arg_names = inspect.getfullargspec(f).args
-        if len(kwargs) > 0:
-            return f(*[exp(arg) for arg in arg_names])(**kwargs)
-        if len(args) < len(arg_names):
-            return f(*[exp(arg) for arg in arg_names])
-        new_kwargs = {}
-        for arg_idx in range(len(arg_names)):
-            new_kwargs[arg_names[arg_idx]] = args[arg_idx]
-        return f(*[exp(arg) for arg in arg_names])(**new_kwargs)
-    return expressionify
+# def latexify(f):
+#     """ Wrapper for functions to use that converts all inputs into latex, with special features:
+#
+#         .. code-block:: python
+#
+#             >>> @latexify
+#             >>> def f(a, b, c):
+#             >>>    return a**2 + 45 * b / c
+#             >>> f()  # this is an expression
+#             \displaystyle{{a^2} + {\frac{{45b}}{c}}}
+#             >>> f(1, -5, 6)  # this is a float
+#             -36.5
+#             >>> f(a=1, b=2)  # this is an expression
+#             \displaystyle{1 + {\frac{90}{c}}}
+#         """
+#     def expressionify(*args, **kwargs):
+#         arg_names = inspect.getfullargspec(f).args
+#         if len(kwargs) > 0:
+#             typ = f(*[exp(arg) for arg in arg_names])(**kwargs)
+#             if isinstance(typ, exp):
+#                 return typ.to_latex()
+#             return typ
+#         if len(args) < len(arg_names):
+#             return f(*[exp(arg) for arg in arg_names]).to_latex()
+#         new_kwargs = {}
+#         for arg_idx in range(len(arg_names)):
+#             new_kwargs[arg_names[arg_idx]] = args[arg_idx]
+#         typ = f(*[exp(arg) for arg in arg_names])(**new_kwargs)
+#         if isinstance(typ, exp):
+#             return typ.to_latex()
+#         return typ
+#     return expressionify
 
 
 class exp(Latexable):
